@@ -1,0 +1,69 @@
+/* Navbar */
+
+.linkContainer h1 {
+    display: inline-block;
+}
+
+.linkContainer {
+    display: grid;
+    grid-template-areas: 'home title history';
+    background-color: black;
+    margin: -10px;
+}
+
+.links {
+    text-align: center;
+}
+
+#home {
+    padding: 23px;
+    text-decoration: none;
+    color: white;
+    grid-area: home;
+    font-size: 25px;
+}
+
+#title {
+    grid-area: title;
+    background-color: black;
+    color: white;
+}
+
+#history {
+    padding: 23px;
+    text-decoration: none;
+    color: white;
+    grid-area: history;
+    font-size: 25px;
+}
+
+#history:hover {
+    color: -webkit-link;
+}
+
+#home:hover {
+    color: -webkit-link;
+}
+
+/* Home Component */
+
+.homeContainer {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px;
+}
+
+.addNew {
+    padding: 30px;
+}
+
+.addNew input {
+    margin: 20px;
+}
+
+/* History Component */
+
+.historyContainer {
+    text-align: center;
+}
