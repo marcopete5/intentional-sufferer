@@ -48,13 +48,28 @@
 /* Home Component */
 
 .homeContainer {
+    margin-top: 15px;
     text-align: center;
     display: grid;
+    grid-template-areas: 
+    'spin add'
+    'arrow .'
+    'wheel .';
+    grid-template-rows: 200px 20px 200px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 100px;
+}
+
+.spinArrow {
+    transform: rotate(133deg);
+    width: 3%;
+    grid-area: arrow;
+    position: relative;
+    margin: auto;
+    bottom: 45px;
 }
 
 .addNew {
+    grid-area: add;
     padding: 30px;
 }
 
@@ -66,4 +81,30 @@
 
 .historyContainer {
     text-align: center;
+}
+
+#spinBtn {
+    box-shadow: 1px 1px 3px black;
+    border-radius: 16px;
+    padding: 21px;
+    grid-area: spin;
+}
+
+#wheel {
+    display: inline-block;
+}
+
+svg {
+    width: 400px;
+}
+
+.pieDiv {
+    grid-area: wheel;
+    position: relative;
+    top: 40px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 3s ease-out
 }
